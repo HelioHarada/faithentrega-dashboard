@@ -1,0 +1,104 @@
+$text: #415058;
+$strong: #576B75;
+$normal: #8A9EA8;
+$light: #C4CFD4;
+$white: #fff;
+$card-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+
+//  text
+@mixin title {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0px;
+
+}
+
+.fs-title{
+    @include title;
+}
+
+// position
+.fs-flex-inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+body{
+    background-color: $white;
+}
+
+.mt-md{
+    margin-top: 16px;
+}
+
+.fs-container{
+    margin: 32px;
+}
+
+.fs-card{
+    background: $normal;
+    /* shadow/card */
+    box-shadow: $card-shadow;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.fs-button{
+    background-color: $strong;
+    color: $white;
+    padding: 8px 16px 8px 16px;
+
+    display: inline-block;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+}
+
+.fs-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .fs-box-button .fs-button{
+        margin-left: 16px;
+       
+    }
+}
+
+.fs-box-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 16px;
+
+
+    .fs-card{
+        width: 300px;
+        height: 100px;
+        margin-right: 16px;
+        color: $white;
+        display: flex;
+        align-items: flex-end;
+
+        .fs-title{
+            margin-right: 16px;
+        }
+
+        .fs-text-list p{
+            margin: 0px;
+        }
+    }
+}
+
+
+// list
+
+.box-list{
+    margin-top: 32px;
+}

@@ -29,7 +29,33 @@ class Header extends HTMLElement{
     }
 }
 
-
+class Card extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <div class="fs-box-profile mt-md">
+        <div class="box-avatar">
+            <div class="circle">
+                <h3>HH</h3>
+                <!-- <img src="person.svg"  alt=""> -->
+            </div>
+        </div>
+        <div class="box-title">
+            <h6>Jose de Alencar</h6>
+            <h6>Status: Em trânsito</h6>
+        </div>
+        <div class="box-text">
+            <p>Em andamento: 3</p>
+            <p>Em andamento: 3</p>
+            <p>Em andamento: 3</p>
+        </div>
+        <div class="box-btn">
+            <button class="btn">Mais detalhes</button>
+       
+        </div>
+    </div>`;
+    }
+}
 
 
 customElements.define('main-header', Header);
+customElements.define('card-profile', Card);

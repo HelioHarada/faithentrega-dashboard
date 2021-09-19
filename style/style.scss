@@ -3,8 +3,10 @@ $strong: #576B75;
 $normal: #8A9EA8;
 $light: #C4CFD4;
 $white: #fff;
-$card-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
 
+// shadows
+$card-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+$card-shadow-destaque: 0px 16px 16px rgba(0, 0, 0, 0.16);
 //  text
 @mixin title {
     font-family: Lato;
@@ -14,6 +16,15 @@ $card-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
     line-height: 43px;
     margin: 0px;
 
+}
+
+@mixin title-h6-bold {
+    /* title/h6 Bold */
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .fs-title{
@@ -36,6 +47,10 @@ body{
     margin-top: 16px;
 }
 
+.mt-lg{
+    margin-top: 32px;
+}
+
 .fs-container{
     margin: 32px;
 }
@@ -43,7 +58,7 @@ body{
 .fs-card{
     background: $normal;
     /* shadow/card */
-    box-shadow: $card-shadow;
+    box-shadow: $card-shadow-destaque;
     border-radius: 8px;
     padding: 16px;
 }
@@ -101,4 +116,117 @@ body{
 
 .box-list{
     margin-top: 32px;
+}
+
+.fs-container-card{
+    display: flex;
+    
+
+}
+
+.fs-box-profile{
+    box-shadow: $card-shadow;
+    border-radius: 8px;
+    max-width:300px;
+    min-width: 300px;
+    margin-right: 16px;
+    padding: 8px 16px 8px 16px;
+    background-color: $light;
+
+    .box-avatar{
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+
+        .circle{
+            background-color: $normal;
+            border-radius: 50%;
+            padding:32px;
+
+            h3{
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+                color: $text;
+            }
+        }
+    }
+
+    .box-title{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0px;
+
+        h6:first-child{
+            margin-top: 16px!important;
+        }
+
+        h6{
+            margin: 0px;
+            @include title-h6-bold;
+            
+        }
+    }
+
+    .box-text{
+        p:first-child{
+            margin-top: 32px;
+        }
+        p{
+            margin-bottom: 8px;
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+
+    }
+
+    .box-btn{
+            
+        .btn{
+            /* wireframe/text */
+
+            background: $normal;
+            /* shadow/button */
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+            border-radius: 8px;
+
+            cursor: pointer;
+            display: inline-block;
+            min-height: 32px;
+            outline: none;
+            border: none;
+            vertical-align: baseline;
+            color: $white;
+            padding: 16px;
+            font-family: "Lato";
+            font-style: normal;
+            text-align: center;
+            text-decoration: none;
+
+            // exclusivo
+            margin-top: 8px;
+            margin-bottom: 16px;
+            width: 100%;
+
+            transition: 0.5s;
+
+            // text
+            font-family: Lato;
+            font-style: normal;
+            font-weight: bold;
+
+        }
+
+        .btn:hover{
+            background: $strong;
+        }
+    }
+
 }

@@ -33,24 +33,50 @@ class Card extends HTMLElement{
     connectedCallback(){
         this.innerHTML = `
         <div class="fs-box-profile mt-md">
-        <div class="box-avatar">
-            <div class="circle">
-                <h3>HH</h3>
-                <!-- <img src="person.svg"  alt=""> -->
-            </div>
-        </div>
+
         <div class="box-title">
-            <h6>Jose de Alencar</h6>
-            <h6>Status: Em trânsito</h6>
+            <p>Motorista</p>
+            <h1>José Alencar</h1>
+            <h4>Status: Em trânsito</h4>
+            <p class="label">útima comunicaçã: 14/09 13:30</p>
         </div>
+
+        <div class="fs-box-peso">
+            <h4>120.000KG</h4>
+            <p>Peso da carga</p>
+        </div>
+
+        <!-- text -->
         <div class="box-text">
-            <p>Em andamento: 3</p>
-            <p>Em andamento: 3</p>
-            <p>Em andamento: 3</p>
+
+            <div class="row">
+                <div class="fs-box-dados">
+                    <h4>120</h4>
+                    <p>Total de entregas</p>
+                </div>
+
+                <div class="fs-box-dados">
+                    <h4>12</h4>
+                    <p>Entregas realizadas</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="fs-box-dados">
+                    <h4>120</h4>
+                    <p>Entrega restantes</p>
+                </div>
+
+                <div class="fs-box-dados">
+                    <h4>12</h4>
+                    <p>Parcial ou não entregues </p>
+                </div>
+            </div>
+
         </div>
         <div class="box-btn">
             <button class="btn">Mais detalhes</button>
-       
+    
         </div>
     </div>`;
     }

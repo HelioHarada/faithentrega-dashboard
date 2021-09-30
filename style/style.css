@@ -14,8 +14,16 @@
   align-items: flex-end;
 }
 
+.fs-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 body {
-  background-color: #fff;
+  background-color: #F2F2F2;
+  color: #415058;
 }
 
 .mt-md {
@@ -30,16 +38,8 @@ body {
   margin: 32px;
 }
 
-.fs-card {
-  background: #8A9EA8;
-  /* shadow/card */
-  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.16);
-  border-radius: 8px;
-  padding: 16px;
-}
-
 .fs-button {
-  background-color: #576B75;
+  background-color: #F7922E;
   color: #fff;
   padding: 8px 16px 8px 16px;
   display: inline-block;
@@ -64,7 +64,12 @@ body {
   margin-top: 16px;
 }
 .fs-box-card .fs-card {
-  width: 300px;
+  background: #F7922E;
+  /* shadow/card */
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 16px;
+  width: 150px;
   height: 100px;
   margin-right: 16px;
   color: #fff;
@@ -76,6 +81,11 @@ body {
 }
 .fs-box-card .fs-card .fs-text-list p {
   margin: 0px;
+  white-space: nowrap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .box-list {
@@ -84,6 +94,7 @@ body {
 
 .fs-container-card {
   display: flex;
+  justify-content: space-between;
 }
 
 .fs-box-profile {
@@ -93,7 +104,7 @@ body {
   min-width: 300px;
   margin-right: 16px;
   padding: 8px 16px 8px 16px;
-  background-color: #C4CFD4;
+  background-color: white;
 }
 .fs-box-profile .box-avatar {
   display: flex;
@@ -119,16 +130,55 @@ body {
   flex-direction: column;
   margin: 0px;
 }
+.fs-box-profile .box-title h1, .fs-box-profile .box-title h2, .fs-box-profile .box-title h3, .fs-box-profile .box-title h4, .fs-box-profile .box-title h5, .fs-box-profile .box-title h6 {
+  margin: 8px;
+  color: #415058;
+}
+.fs-box-profile .box-title h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  color: #415058;
+}
+.fs-box-profile .box-title p {
+  margin: 8px;
+}
+.fs-box-profile .box-title .label {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 0px;
+}
 .fs-box-profile .box-title h6:first-child {
   margin-top: 16px !important;
 }
 .fs-box-profile .box-title h6 {
-  margin: 0px;
   /* title/h6 Bold */
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
+}
+.fs-box-profile .fs-box-peso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fs-box-profile .fs-box-peso h4 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+}
+.fs-box-profile .fs-box-peso p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
 }
 .fs-box-profile .box-text p:first-child {
   margin-top: 32px;
@@ -140,11 +190,42 @@ body {
   font-weight: normal;
   font-size: 16px;
 }
+.fs-box-profile .box-text .row {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fs-box-profile .box-text .row .fs-box-dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  max-width: 130px;
+}
+.fs-box-profile .box-text .row .fs-box-dados h4 {
+  font-family: lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+  color: #415058;
+}
+.fs-box-profile .box-text .row .fs-box-dados p {
+  margin-top: 8px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
 .fs-box-profile .box-btn .btn {
   /* wireframe/text */
-  background: #8A9EA8;
+  background-color: #F7922E;
+  color: #fff;
   /* shadow/button */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   cursor: pointer;
   display: inline-block;
@@ -159,7 +240,7 @@ body {
   text-align: center;
   text-decoration: none;
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   width: 100%;
   transition: 0.5s;
   font-family: Lato;
@@ -168,6 +249,15 @@ body {
 }
 .fs-box-profile .box-btn .btn:hover {
   background: #576B75;
+}
+
+.fs-container-ranking {
+  margin-top: 32px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  background-color: #C4CFD4;
+  width: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -146,55 +146,56 @@
                 </div>
             </div>
 
-            <!-- LISTAS -->
-            <div class="box-list">
 
-                <!-- header list -->
-                <div class="fs-flex-inline">
-                    <h1 class="fs-title">Lista de cargas</h1>
-                    <div class="ui icon input">
-                        <input type="text" placeholder="Search..." class="">
-                        <i class="circular search link icon"></i>
-                      </div>
-                </div>
-
-                <!-- syn fusion - subistuir a imagem pelo syncfusion -->
-                <div class="mt-md">
-                    <img src="list.png" width="100%"  alt="">
-                </div>
-            </div>
-
-            <!-- Card motorista -->
-            <div class="fs-container-profile mt-lg">
-                <h1>Motorista</h1>
-
+                
+            <div class="layout">
+                <!-- timeLine -->
+                <section class="timeline">
+                    <div class="timeline-line">
+                      <span class="timeline-innerline"></span>
+                    </div>
+              
+                    <ul>
+                        <!-- card timeline -->
+                      <li>
+                        <span class="timeline-point"></span>
+                        <div class="card-timeline">
+                            <h4>Inicio da carga</h4>
+                            <div>
+                                <p>Hora: 06:30</p>
+                                <p>Número da entrega: 12321321</p>
+                            </div>
+                            <!-- Button Local -->
+                            <div class="row-status">
+                                <h5>Entrega Realizada</h5>
+                                <div class="btn-location">
+                                    <img src="map-pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                      </li>
             
-                <div class="fs-slider fs-container-card">
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+                      <card-timeline></card-timeline>
+            
+                      
+                    </ul>
+                </section>
 
-      
-
-                    <card-profile></card-profile>
-                    <card-profile></card-profile>
-                    <card-profile></card-profile>
-                    <card-profile></card-profile>
-                    <card-profile></card-profile>
-         
-
-      
-                </div>
+                <!-- map -->
+                <section class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50635.17909152866!2d-46.654670708321845!3d-23.59202165809727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59efc12066a3%3A0x79b6769dec1ee80f!2sMuseu%20Afro%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1633240545735!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
             </div>
+  
+            
 
 
-
-
-            <div>
-                <div class="fs-container-ranking fs-left-side">
-                    <h1>Ranking de motivos</h1>
-                    <h1>we</h1>
-                </div>
-            </div>
-
-            <br><br><br>
         </div> <!-- closed container-->
 
 

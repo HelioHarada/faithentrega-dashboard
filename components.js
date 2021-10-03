@@ -10,8 +10,8 @@ class Header extends HTMLElement{
         <a class="item">
             Messages
         </a>
-        <a class="item">
-            Friends
+        <a class="item" href="profile.html">
+            profile
         </a>
         <div class="right menu">
             <div class="item">
@@ -82,6 +82,97 @@ class Card extends HTMLElement{
     }
 }
 
+class Cardtimeline extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <li>
+        <span class="timeline-point"></span>
+        <div class="card-timeline">
+            <h4>Inicio da carga</h4>
+            <div>
+                <p>Hora: 06:30</p>
+                <p>Número da entrega: 12321321</p>
+            </div>
+            <!-- Button Local -->
+            <div class="row-status">
+                <h5>Entrega Realizada</h5>
+                <div class="btn-location">
+                    <img src="map-pin.svg" alt="">
+                </div>
+            </div>
+        </div>
+      </li>
+        `
+    }
+}
 
 customElements.define('main-header', Header);
 customElements.define('card-profile', Card);
+customElements.define('card-timeline', Cardtimeline);
+
+$(window).resize(function(){
+    $('.fs-slider')[0].slick.refresh();
+  });
+
+
+
+
+
+$(document).ready(function(){
+    $('.fs-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    mobileFirst:true,//add this one
+
+
+    });
+  });
+
+  if($(window).width() < 600){
+
+ 
+    $('.fs-slider').slick({
+        mobileFirst:true,
+        responsive: [
+            {
+              breakpoint: 12024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+    
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              },
+    
+            
+    
+          ]
+    })
+
+    $('.fs-slider')[0].slick.refresh();
+}
+

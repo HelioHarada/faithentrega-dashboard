@@ -94,6 +94,7 @@ body {
 
 .fs-container-card {
   display: flex;
+  padding: 2%;
   justify-content: space-between;
 }
 
@@ -253,11 +254,161 @@ body {
 
 .fs-container-ranking {
   margin-top: 32px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
   padding: 8px 16px 8px 16px;
   background-color: #C4CFD4;
   width: 600px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #F7922E;
+}
+
+.layout {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+.map {
+  width: 70%;
+}
+
+section {
+  margin: 20px 0;
+  background-color: #F2F2F2;
+}
+
+.timeline {
+  display: grid;
+  width: 30%;
+  padding: 16px;
+  border-right: 1px solid #F7922E;
+  grid-template-columns: 8px auto;
+  justify-content: flex-start;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+ul {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  padding: 32px 0px 0px 32px;
+}
+
+li p {
+  padding: 0 20px;
+  transition: 1.5s;
+}
+
+.date {
+  position: absolute;
+  top: 30px;
+  left: -50px;
+  opacity: 0;
+  transition: 1.5s;
+  font-size: 12px;
+}
+
+.timeline-line {
+  background: #F7922E;
+  width: 4px;
+  border-radius: 12px;
+  position: relative;
+  justify-self: end;
+}
+
+.timeline-point {
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  background: #F7922E;
+  width: 20px;
+  height: 20px;
+  top: 32px;
+  left: -12px;
+  transition: 1.5s ease;
+}
+
+.card-timeline {
+  border: 1px solid #F7922E;
+  padding: 16px;
+  border-radius: 0px 8px 8px 8px;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+}
+.card-timeline h6 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  /* wireframe/text */
+  color: #415058;
+}
+.card-timeline p {
+  margin: 0px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+.card-timeline .row-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.card-timeline .row-status h5 {
+  margin: 0px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+.card-timeline .row-status .btn-location {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* background/base */
+  background: #F2F2F2;
+  /* shadow/card */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  width: 42px;
+  height: 42px;
+  transition: linear 0.5s;
+}
+.card-timeline .row-status .btn-location img {
+  max-width: 32px;
+}
+.card-timeline .row-status .btn-location:hover {
+  background: #8A9EA8;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.timeline-innerline {
+  position: absolute;
+  background: blue;
+  width: 4px;
+  height: 0%;
+  top: 0%;
+  left: 0%;
+  transition: 1s linear;
 }
 
 /*# sourceMappingURL=style.css.map */

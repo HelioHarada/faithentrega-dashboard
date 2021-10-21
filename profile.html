@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -14,6 +16,11 @@
         crossorigin="anonymous" />
         <script src="semantic/dist/semantic.min.js"></script>
 
+    <!-- datatable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    
     <!-- Slide Slick -->
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -27,9 +34,11 @@
     <link rel="stylesheet" href="style/style.css">
 
 
-    <!-- components -->
-    <script src="components.js"></script>
+ 
     <title>Document</title>
+
+ 
+    
 </head>
 
 
@@ -37,159 +46,254 @@
 
     <div class="ui main">
 
-        <!-- Header -->
-        <main-header></main-header>
+        <div class="fs-container-profile">
+                
+            <div class="layout">
 
-        <div class="ui divider"></div>
+                <div class="sidebar">
+                    <div class="box-info">
 
-        <div class="fs-container">
-
-            <!-- TOP -->
-            <div class="fs-top">
-                <div class="fs-button">
-                    <p>16/09/2021</p>
-                </div>
-    
-                <div class="fs-box-button">
-                    <div class="fs-button">
-                        <p>Nova entrega</p>
-                    </div>
-                    
-                    <div class="fs-button">
-                        <p>Novo motorista</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARD TOP -->
-            <div class="fs-box-card">
-
-                <!-- left -->
-                <div>
-                    <h1>Carga</h1>
-
-                    <div class="fs-flex-inline">
-                        <!-- card  -->
-                        <div class="fs-card">
-                            <div class="fs-flex-column">
-                                <h1 class="fs-title">6</h1>
-                                <p>Total de carga</p>
+                        <div>   
+                            <button class="fs-button">
+                                16/09/2021
+                                <img src="img/calendar.svg" alt="">
+                            </button>
+                        </div>
+                        <!-- Input select -->
+                        <div class="fs-box-input">
+                            <div class="fs-input">
+                                <select name="cars" id="cars">
+                                    <option value="volvo">José de Alencar</option>
+                                    <option value="saab">Olavo Bilac</option>
+                                    <option value="mercedes">Sergio Buarque de Holanda</option>
+                                    <option value="audi">Abdias Nascimento</option>
+                                  </select>
                             </div>
                         </div>
-                        
-                        <!-- card  -->
+                    
+                        <!-- card info -->
+                        <div>
+                            <div class="card-info">
+                                <h4>Código da carga</h4>
+
+                                <div class="desc-label">
+                                    <img src="img/map-pin.svg" width="24px" alt="">
+                                    <p>Distância percorrida/Planejada: <span>320km/600km</span></p>
+                                </div>
+                                
+                                <div class="desc-label">
+                                    <img src="img/alarm.svg" width="24px" alt="">
+                                    <p>(14) 998732234</p>
+                                </div>
+                                
+                                <div class="desc-label">
+                                    <img src="img/clock.svg" width="24px" alt="">
+                                    <p>Inicio da carga: 20/08/2021 - 06:30</p>
+                                </div>
+                                
+                                                                
+                                <div class="desc-label">
+                                    <img src="img/notification.svg" width="24px" alt="">
+                                    <p>Última notificação: 10: 32</p>
+                                </div>
+
+                                <div class="desc-label">
+                                    <img src="img/timer.svg" width="24px" alt="">
+                                    <p>Tempo na carga: 13:32</p>
+                                </div>
+ 
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- timeLine -->
+                    <h1>Linha do tempo</h1>
+                    <section class="timeline">
+                        <div class="timeline-line">
+                        <span class="timeline-innerline"></span>
+                        </div>
+                
+                        <ul>
+                            <!-- card timeline -->
+                        <li>
+                            <span class="timeline-point"></span>
+                            <div class="card-timeline">
+                                <h4>Inicio da carga</h4>
+                                <div>
+                                    <p>Hora: 06:30</p>
+                                    <p>Número da entrega: 12321321</p>
+                                </div>
+                                <!-- Button Local -->
+                                <div class="row-status">
+                                    <h5>Entrega Realizada</h5>
+                                    <div class="fs-flex-inline">
+
+                                        <div class="btn-icon btn-detalhes">
+                                            <img src="img/doc.svg" alt="">
+                                        </div>
+                                        <div class="btn-icon">
+                                            <img src="img/map-pin.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        <card-timeline></card-timeline>
+                        </ul>
+                    </section>  
+                </div>
+
+                <!-- map -->
+                <section class="map-container">
+
+                     <!-- right -->
+                    <div class="box-card">
+                    
+
+                        <!--  card -->
                         <div class="fs-card">
                             <div class="fs-flex-column">
-                                <h1 class="fs-title">6</h1>
+                                <h1 class="fs-title">242</h1>
+                                <p>Entrega totais</p>
+                            </div>
+                        </div>
+
+                        <div class="fs-card">
+                            <div class="fs-flex-column">
+                                <h1 class="fs-title">42</h1>
                                 <p>Em aberto</p>
                             </div>
                         </div>
 
-                        <!-- card  -->
                         <div class="fs-card">
                             <div class="fs-flex-column">
-                                <h1 class="fs-title">126</h1>
+                                <h1 class="fs-title">80</h1>
                                 <p>Finalizados</p>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <!-- right -->
-                <div>
-                    <h1>Entrega</h1>
-
-                    <div class="fs-flex-inline fs-box-card">
-                        <!--  card -->
                         <div class="fs-card">
                             <div class="fs-flex-column">
-                                <h1 class="fs-title">126</h1>
-                                <p>Total de entrega</p>
+                                <h1 class="fs-title">20</h1>
+                                <p>Parcial/ Não entregue</p>
                             </div>
                         </div>
 
-                        <!-- card  -->
-                        <div class="fs-card">
-                            <div class="fs-flex-column">
-                                <h1 class="fs-title">4</h1>
-                                <div class="fs-text-list">
-                                    <p>Em aberto</p>
-                            
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- card  -->
-                        <div class="fs-card">
-                            <div class="fs-flex-column">
-                                <h1 class="fs-title">4</h1>
-                                <div class="fs-text-list">
-                                    <p>Finalizados</p>
-                            
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- card  -->
-                        <div class="fs-card">
-                            <div class="fs-flex-column">
-                                <h1 class="fs-title">4</h1>
-                                <div class="fs-text-list">
-                                    <p>Parcial/Não entregue</p>
-                               
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
-
-                </div>
-            </div>
-
-
-                
-            <div class="layout">
-                <!-- timeLine -->
-                <section class="timeline">
-                    <div class="timeline-line">
-                      <span class="timeline-innerline"></span>
-                    </div>
-              
-                    <ul>
-                        <!-- card timeline -->
-                      <li>
-                        <span class="timeline-point"></span>
-                        <div class="card-timeline">
-                            <h4>Inicio da carga</h4>
-                            <div>
-                                <p>Hora: 06:30</p>
-                                <p>Número da entrega: 12321321</p>
+                    <!-- Legenda mapa -->
+                    <div class="fs-subtitle">
+                        <div class="info">
+                            <div class="box-legend">
+                                <img src="img/pin-green.svg" width="24px" alt="">
+                                <p>Entrega realizada</p>
                             </div>
-                            <!-- Button Local -->
-                            <div class="row-status">
-                                <h5>Entrega Realizada</h5>
-                                <div class="btn-location">
-                                    <img src="map-pin.svg" alt="">
-                                </div>
+
+                            <div class="box-legend">
+                                <img src="img/pin-yellow.svg" width="24px" alt="">
+                                <p>Realizada fora cliente</p>
+                            </div>
+
+                            <div class="box-legend">
+                                <img src="img/pin-red.svg" width="24px" alt="">
+                                <p>Sem cordenada</p>
                             </div>
                         </div>
-                      </li>
-            
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-                      <card-timeline></card-timeline>
-            
-                      
-                    </ul>
+                    </div>
+                    <!-- iframe map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50635.17909152866!2d-46.654670708321845!3d-23.59202165809727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59efc12066a3%3A0x79b6769dec1ee80f!2sMuseu%20Afro%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1633240545735!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                       
+                   
+               
                 </section>
 
-                <!-- map -->
-                <section class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50635.17909152866!2d-46.654670708321845!3d-23.59202165809727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59efc12066a3%3A0x79b6769dec1ee80f!2sMuseu%20Afro%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1633240545735!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <section id="container-detalhes">
+                    <div  class="fs-detalhes">
+                        <button id="back-map" class="fs-button">
+                            VOLTAR PARA O MAPA
+                            <img src="img/calendar.svg" alt="">
+                        </button>
+                        <h1>detalhes da entrega</h1>
+
+                        <div class="header-info">
+                            <div>
+                                <p>Numero da Entrega</p>
+                                <p>Numero da Entrega</p>
+                                <p>Numero da Entrega</p>
+                            </div>
+                            <div>
+                                <p>Numero da Entrega</p>
+                                <p>Numero da Entrega</p>
+                            </div>
+                        </div>
+
+                        <!-- Lista de produtos  -->
+                        <div class="lista-produtos">
+                            <!-- datatable -->
+                            <table id="table_id" class="fs-table cell-border compact stripe">
+                                <thead>
+                                    <tr>
+                                        <th>Cod</th>
+                                        <th>Produto</th>
+                                        <th>Embalagem</th>
+                                        <th>Quantidade</th>
+                                        <th>Valor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td>29982</td>
+                                        <td>AJI SAZON PIPOCA 60g </td>
+                                        <td>CX</td>
+                                        <td>12</td>
+                                        <td>R$ 12.000,00</td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>29982</td>
+                                        <td>AJI SAZON PIPOCA 60g </td>
+                                        <td>CX</td>
+                                        <td>12</td>
+                                        <td>R$ 12.000,00</td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>29982</td>
+                                        <td>AJI SAZON PIPOCA 60g </td>
+                                        <td>CX</td>
+                                        <td>12</td>
+                                        <td>R$ 12.000,00</td>
+                                    
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="fs-comprovantes">
+                            <h1>Comprovantes</h1>
+
+                            <div>
+                                <p>foto comprovante</p>
+                                <button class="fs-button">
+                                    VER FOTO
+                                    <img src="img/calendar.svg" alt="">
+                                </button>
+
+                
+
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
   
@@ -207,7 +311,10 @@
 </body>
 
 
-
+   <!-- components -->
+   <script src="components.js"></script>
+   <!-- main.js -->
+   <script src="main.js"></script>
 <!-- 
 <script src="main.js"></script>
  -->

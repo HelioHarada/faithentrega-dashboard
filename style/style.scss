@@ -404,8 +404,7 @@ body {
                     line-height: 14px;                
   line-height: 14px;
 }
-                }   
-}
+               
 
 .fs-box-profile .box-btn .btn {
   /* wireframe/text */
@@ -509,6 +508,16 @@ body {
   flex-direction: column;
   padding: 32px 0px 16px 0px;
   min-height: 200px;
+
+  .box-button{
+    display: flex;
+    // background-color: red;
+
+    .fs-button{
+      margin-right: 8px;
+    }
+
+  }
 }
 
 .layout .sidebar .box-info .box-input {
@@ -578,7 +587,11 @@ body {
   display: flex;
   -webkit-box-align: end;
   -ms-flex-align: end;
-  align-items: flex-end;
+  align-items: center;
+
+  h1{
+    margin: 0;
+  }
 }
 
 .map-container .box-card .fs-card h1 {
@@ -811,7 +824,7 @@ li p {
 }
 
 .fs-detalhes {
-  background-color: #8A9EA8;
+  background-color: $white;
   padding: 16px;
 }
 
@@ -822,16 +835,32 @@ li p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 16px;
-  color: white;
+  margin-bottom: 16px;
+  color: $text;
+
+  .box-info{
+    p{
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .fs-detalhes .lista-produtos {
-  background-color: white;
+  background-color: $background-color;
   padding: 16px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+
+  input, select{
+    background-color: white;
+  }
+
+}
+
+.fs-comprovantes{
+  // background-color: red;
+  padding-top: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

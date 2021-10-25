@@ -16,6 +16,11 @@
         crossorigin="anonymous" />
         <script src="semantic/dist/semantic.min.js"></script>
 
+        
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
     <!-- datatable -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
   
@@ -291,10 +296,12 @@
 
                             <div>
                                 <p>foto comprovante</p>
-                                <button class="fs-button">
-                                    VER FOTO
-                                    <img src="img/camera.svg" alt="">
-                                </button>
+                                <a href="#ex1" rel="modal:open">
+                                    <button class="fs-button">
+                                        VER FOTO
+                                        <img src="img/camera.svg" alt="">
+                                    </button>
+                                </a>
 
                 
 
@@ -309,6 +316,29 @@
 
         </div> <!-- closed container-->
 
+
+        <!-- MODAL -->
+
+        <div id="ex1" class="modal">
+            <p>Comprovante de entrega</p>
+            <img class="main-img" src="img/recibo.gif" alt="">
+
+            <div class="box-btn">
+                <a href="#">
+                    <button class="btn">
+                        <img src="img/download.svg" alt="">
+                    </button>
+                </a>
+
+                <a href="#">
+                    <button class="btn">
+                        <img src="img/share.svg" alt="">
+                    </button>
+                </a>
+       
+            </div>
+    
+          </div>
 
     </div>
     

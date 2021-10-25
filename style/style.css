@@ -414,8 +414,16 @@ body {
   margin-top: 32px;
   border-radius: 8px;
   padding: 8px 16px 8px 16px;
-  background-color: #C4CFD4;
+  background-color: #8A9EA8;
   width: 600px;
+}
+
+.fs-container-ranking h1 {
+  color: white;
+}
+
+.fs-container-ranking p {
+  color: white;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -827,5 +835,39 @@ li p {
 
 .fs-comprovantes {
   padding-top: 16px;
+}
+
+.modal .box-btn .btn {
+  /* wireframe/text */
+  background-color: #F7922E;
+  color: #fff;
+  /* shadow/button */
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  color: #fff;
+  padding: 8px;
+  font-family: "Lato";
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.modal .box-btn .btnhover {
+  background: #576B75;
+}
+
+.modal .main-img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -27,6 +27,37 @@ $card-shadow-destaque: 0px 16px 16px rgba(0, 0, 0, 0.16);
     margin: 0px;
 }
 
+@mixin btn{
+    /* wireframe/text */
+    background-color: #F7922E;
+    color: #fff;
+    /* shadow/button */
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    border: none;
+    vertical-align: baseline;
+    color: #fff;
+    padding: 8px;
+    font-family: "Lato";
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+
+    &hover{
+      background: #576B75;
+    }
+  
+}
+
 .fs-flex-inline {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,8 +475,16 @@ body {
   margin-top: 32px;
   border-radius: 8px;
   padding: 8px 16px 8px 16px;
-  background-color: #C4CFD4;
+  background-color: $normal;
   width: 600px;
+
+  h1{
+    color: white;
+  }
+
+  p{
+    color: white;
+  }
 }
 
 .slick-prev:before, .slick-next:before {
@@ -861,6 +900,21 @@ li p {
 .fs-comprovantes{
   // background-color: red;
   padding-top: 16px;
+}
+
+.modal{
+
+  .box-btn{
+    
+    .btn{
+      @include btn;
+    }
+  }
+
+  .main-img{
+    width: 100%;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */

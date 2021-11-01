@@ -5,7 +5,10 @@ $light: #C4CFD4;
 $white: #fff;
 
 
+
 $primary: #F7922E;
+$second: #4418AB;
+
 $background-color: #F2F2F2;
 // shadows
 $card-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
@@ -157,7 +160,7 @@ body {
 }
 
 .fs-button:hover {
-  background: #576B75;
+  background: $second;
 }
 
 .fs-top {
@@ -468,18 +471,18 @@ body {
 }
 
 .fs-box-profile .box-btn .btn:hover {
-  background: #576B75;
+  background: $second;
 }
 
 .fs-container-ranking {
   margin-top: 32px;
   border-radius: 8px;
-  padding: 8px 16px 8px 16px;
-  background-color: $normal;
+  padding: 16px;
+  background-color: $white;
   width: 600px;
 
   h1{
-    color: white;
+    color: $text;
   }
 
   p{
@@ -841,7 +844,7 @@ li p {
 }
 
 .card-timeline .row-status .btn-icon:hover {
-  background: #8A9EA8;
+  background: $light;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
 }

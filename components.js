@@ -130,6 +130,8 @@ class Rowtable extends HTMLElement{
     }
 }
 
+
+
 customElements.define('main-header', Header);
 customElements.define('card-profile', Card);
 customElements.define('card-timeline', Cardtimeline);

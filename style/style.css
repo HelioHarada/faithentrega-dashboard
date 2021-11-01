@@ -97,7 +97,7 @@ body {
 }
 
 .fs-button:hover {
-  background: #576B75;
+  background: #4418AB;
 }
 
 .fs-top {
@@ -407,19 +407,19 @@ body {
 }
 
 .fs-box-profile .box-btn .btn:hover {
-  background: #576B75;
+  background: #4418AB;
 }
 
 .fs-container-ranking {
   margin-top: 32px;
   border-radius: 8px;
-  padding: 8px 16px 8px 16px;
-  background-color: #8A9EA8;
+  padding: 16px;
+  background-color: #fff;
   width: 600px;
 }
 
 .fs-container-ranking h1 {
-  color: white;
+  color: #415058;
 }
 
 .fs-container-ranking p {
@@ -780,7 +780,7 @@ li p {
 }
 
 .card-timeline .row-status .btn-icon:hover {
-  background: #8A9EA8;
+  background: #C4CFD4;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
 }

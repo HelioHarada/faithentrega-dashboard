@@ -1,5 +1,6 @@
 $text: #415058;
 $strong: #576B75;
+$hover: #E0641F;
 $normal: #8A9EA8;
 $light: #C4CFD4;
 $white: #fff;
@@ -160,7 +161,7 @@ body {
 }
 
 .fs-button:hover {
-  background: $second;
+  background: $hover;
 }
 
 .fs-top {
@@ -471,7 +472,7 @@ body {
 }
 
 .fs-box-profile .box-btn .btn:hover {
-  background: $second;
+  background: $hover;
 }
 
 .fs-container-ranking {
